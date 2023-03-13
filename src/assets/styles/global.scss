@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-style: normal;
+}
+
+$darkColor: #191E29;
+$blackColor: #0B0E14;
+$greyColor: #6F6F6F;
+
+body {
+  background-image: url("../images/backgroundFon.svg");
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 50px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+%display-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin fontStyles($family, $size, $weight, $height, $color) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
