@@ -1,9 +1,14 @@
 @import "../../../../assets/styles/global.scss";
 
 .home-hero {
-  margin-right: 622px;
+
+  .container {
+    position: relative;
+  }
 
   &-desc {
+    margin-right: 622px;
+
     &-title {
       margin-bottom: 30px;
       @include fontStyles('Montserrat', 50px, 700, 61px, $blackColor);
@@ -12,6 +17,74 @@
     &-text {
       text-align: justify;
       @include fontStyles('Raleway', 18px, 400, 120%, $greyColor);
+    }
+  }
+
+  &-service {
+    padding: 80px 499px 45px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &-desc {
+      width: 295px;
+
+      &-text {
+        text-align: justify;
+        @include fontStyles('Raleway', 14px, 600, 130%, $darkColor);
+      }
+
+      &-btn {
+        margin-top: 30px;
+        padding: 14px 25px;
+        border: none;
+        background-color: $btnColor;
+        cursor: pointer;
+        @include fontStyles('Inter', 18px, 500, 22px, $lightColor);
+      }
+    }
+  }
+
+  &-links {
+    z-index: -12;
+    padding: 50px 0 77px;
+    background-color: $lightColor;
+
+    .container {
+      padding-right: 564px;
+      display: flex;
+      gap: 80px;
+    }
+
+    & p {
+      white-space: nowrap;
+      word-break: keep-all;
+      margin-bottom: 20px;
+      @include fontStyles('Montserrat', 18px, 500, 22px, $blackColor);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+
+
+      &>a {
+        @include fontStyles('Raleway', 18px, 500, 150%, $btnColor);
+        text-decoration: underline;
+      }
+    }
+
+    &-flags {
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 10px;
+
+        &-item {
+          display: flex;
+          align-items: center;
+        }
+      }
     }
   }
 }

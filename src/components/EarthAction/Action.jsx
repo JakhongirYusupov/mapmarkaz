@@ -1,6 +1,6 @@
 import "./Action.scss";
 
-export default function Action({ children }) {
+export default function ActionEarth({ children }) {
   return (
     <div className="earth-wrapper">
       <div className="earth-img"></div>

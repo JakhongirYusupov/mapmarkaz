@@ -2,7 +2,6 @@ import "./Header.scss";
 import logo from "../../assets/images/logo.svg";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import Action from "../EarthAction/Action";
 
 export default function Header() {
   const { t } = useTranslation();
@@ -33,7 +32,6 @@ export default function Header() {
             </nav>
           </div>
         </div>
-        <Action />
       </div>
 
     </header>

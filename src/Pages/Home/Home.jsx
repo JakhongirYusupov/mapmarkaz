@@ -1,14 +1,14 @@
 import "./Home.scss";
-import { Hero } from './components';
+import { Content, Hero, HomeAbout, Service } from './components';
 
 export default function Home() {
 
   return (
     <main className='home'>
-      <div className="container">
-        <Hero />
-      </div>
-
+      <Hero />
+      <HomeAbout />
+      <Service />
+      <Content />
     </main>
   )
 }

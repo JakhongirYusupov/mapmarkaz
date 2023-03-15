@@ -1,11 +1,11 @@
 @import "../../assets/styles/global.scss";
 
 .header {
-  z-index: 999;
   padding-top: 20px;
 
   .container {
     position: relative;
+    z-index: 100;
     @extend %display-center;
   }
 

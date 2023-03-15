@@ -1,0 +1,11 @@
+@import "../../../../assets/styles/global.scss";
+
+.home-content {
+  padding: 150px 0;
+
+  &-title {
+    @include fontStyles('Montserrat', 50px, 700, 61px, $darkColor);
+  }
+
+  // &-finance {}
+}
