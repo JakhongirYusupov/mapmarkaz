@@ -3,9 +3,186 @@
 .home-content {
   padding: 150px 0;
 
+  &-inputs {
+    display: flex;
+    gap: 20px;
+  }
+
+  &-sendInput {
+    &>label {
+      padding: 14px 25px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: $btnColor;
+      cursor: pointer;
+
+      &>span {
+        @include fontStyles('Montserrat', 18px, 500, 22px, $lightColor);
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: $lightColor;
+    }
+
+    &>input {
+      display: none
+    }
+  }
+
+  &-seeButton {
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: $darkColor;
+    border: none;
+    cursor: pointer;
+
+    &>span {
+      @include fontStyles('Montserrat', 18px, 500, 22px, $lightColor);
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      color: $lightColor;
+    }
+  }
+
   &-title {
+    margin-bottom: 50px;
     @include fontStyles('Montserrat', 50px, 700, 61px, $darkColor);
   }
 
-  // &-finance {}
+  &-finance {
+    padding-bottom: 150px;
+
+    &-action {
+      padding: 30px;
+      background-color: $lightColor;
+      border-radius: 5px;
+
+      &-border {
+        width: 100%;
+        height: 1px;
+        margin: 30px 0;
+        opacity: 0.5;
+        border-radius: 5px;
+        background-color: $greyColor;
+      }
+
+      &-date {
+        display: flex;
+        gap: 20px;
+
+        &-title {
+          @include fontStyles('Montserrat', 20px, 500, 120%, #80848A);
+        }
+
+        &-year {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          &>select {
+            padding: 0 30px;
+            width: 150px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.1);
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
+        }
+
+        &-kvartal {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          &-pagination {
+            display: flex;
+            gap: 20px;
+
+            &-item {
+              @extend %display-center;
+              justify-content: center;
+              height: 50px;
+              width: 85px;
+              background: rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(10px);
+              cursor: pointer;
+            }
+
+            &-search {
+              padding: 14px 25px;
+              background-color: $darkColor;
+              @extend %display-center;
+              gap: 12px;
+              cursor: pointer;
+
+              &>span {
+                @include fontStyles('Montserrat', 18px, 500, 22px, $lightColor);
+              }
+
+              &-icon {
+                width: 22px;
+                height: 22px;
+                color: $lightColor;
+              }
+            }
+          }
+        }
+      }
+
+      &-sendFile {
+        display: flex;
+        align-items: center;
+
+        &-title {
+          margin-right: 30px;
+
+          &>p {
+            @include fontStyles('Montserrat', 20px, 500, 24px, $darkColor);
+          }
+        }
+      }
+    }
+  }
+
+  &-elon {
+    display: grid;
+    gap: 10px;
+
+    &-item {
+      transition: all 0.4s;
+      height: 90px;
+      display: grid;
+      gap: 40px;
+      overflow: hidden;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &>span {
+        @include fontStyles('Raleway', 25px, 700, 120%, #1A212C);
+      }
+
+      &-arrowIcon {
+        width: 24px;
+        height: 24px;
+        color: #072649;
+        transition: all 0.4s;
+        transform: rotate(0deg);
+      }
+    }
+  }
 }

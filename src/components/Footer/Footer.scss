@@ -1,0 +1,92 @@
+@import "../../assets/styles/global.scss";
+
+.footer {
+  background: #1A212C;
+
+  &-top {
+    padding: 50px 0;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      row-gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    &-logo {
+      width: 100%;
+      max-width: 324px;
+
+      &-desc {
+        margin-top: 30px;
+        @include fontStyles('Raleway', 16px, 400, 20px, $footerColor);
+      }
+    }
+
+    &-navs {
+      display: flex;
+      gap: 50px;
+    }
+
+    &-nav {
+      width: 327px;
+
+      &-title {
+        margin-bottom: 30px;
+        @include fontStyles('Montserrat', 20px, 700, 120%, $lightColor);
+      }
+
+      &-list {
+        display: grid;
+        gap: 20px;
+
+        &-location {
+          gap: 10px;
+        }
+
+        &-item-link {
+          display: flex;
+
+          &>span {
+            @include fontStyles('Raleway', 18px, 400, 25px, $footerColor);
+          }
+
+          &>a {
+            text-decoration: underline;
+            @include fontStyles('Raleway', 18px, 700, 25px, $lightColor);
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-desc {
+      @include fontStyles('Raleway', 18px, 400, 27px, rgba(255, 255, 255, 0.2));
+    }
+
+    &-scrollTop {
+      width: 73px;
+      height: 73px;
+      background: #313A48;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        color: $lightColor;
+      }
+    }
+  }
+}
